@@ -1,5 +1,5 @@
 "use client"
-
+import Image from "next/image"
 import { useState } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -10,31 +10,32 @@ import { Search, SlidersHorizontal } from "lucide-react"
 
 
 
+
 const products = [
   {
     id: 1,
     name: "Stylish T-Shirt",
     category: "Clothing",
     price: 29.99,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/tshirt.jpg",
   },
   {
     id: 2,
     name: "Comfortable Jeans",
     category: "Clothing",
     price: 59.99,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/jeans.jpg",
   },
-  { id: 3, name: "Running Shoes", category: "Footwear", price: 89.99, image: "/placeholder.svg?height=200&width=200" },
+  { id: 3, name: "Running Shoes", category: "Footwear", price: 89.99, image: "/running-shoes.jpg" },
   {
     id: 4,
     name: "Leather Wallet",
     category: "Accessories",
     price: 39.99,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/leather-wallet.jpg",
   },
-  { id: 5, name: "Smartwatch", category: "Electronics", price: 199.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 6, name: "Sunglasses", category: "Accessories", price: 79.99, image: "/placeholder.svg?height=200&width=200" },
+  { id: 5, name: "Smartwatch", category: "Electronics", price: 199.99, image: "/smartwatch.jpg" },
+  { id: 6, name: "Sunglasses", category: "Accessories", price: 79.99, image: "/sunglasses.jpg" },
 ]
 
 export default function ProductSearch() {
@@ -58,7 +59,7 @@ export default function ProductSearch() {
     })
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 bg-blue-200 px-8 py-12">
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-grow">
           <Input
@@ -136,9 +137,11 @@ export default function ProductSearch() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts.map((product) => (
               <Card key={product.id} className="overflow-hidden">
-                <img
+                <Image
                   src={product.image || "/placeholder.svg"}
                   alt={product.name}
+                  width={300}
+                  height={300}
                   className="w-full h-48 object-cover"
                 />
                 <CardContent className="p-4">
