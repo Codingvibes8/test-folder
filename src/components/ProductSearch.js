@@ -1,11 +1,11 @@
 "use client"
 import Image from "next/image"
 import { useState } from "react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Slider } from "@/components/ui/slider"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "../components/ui/input"
+import { Button } from "../components/ui/button"
+import { Slider } from "../components/ui/slider"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../components/ui/card"
 import { Search, SlidersHorizontal } from "lucide-react"
 
 
@@ -59,7 +59,7 @@ export default function ProductSearch() {
     })
 
   return (
-    <div className="space-y-6 bg-blue-200 px-8 py-12">
+    <div className="space-y-6 bg-green-200 px-8 py-12">
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-grow">
           <Input
@@ -85,7 +85,7 @@ export default function ProductSearch() {
 
       <div className="flex flex-col sm:flex-row gap-6">
         <div className="w-full sm:w-64 space-y-4">
-          <Card>
+          <Card className={'shadow-lg hover:scale-75 cursor-pointer'}>
             <CardHeader>
               <CardTitle className="text-lg flex items-center gap-2">
                 <SlidersHorizontal size={20} />
