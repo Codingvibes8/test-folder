@@ -59,7 +59,7 @@ export default function ProductSearch() {
     })
 
   return (
-    <div className="space-y-6 bg-green-200 px-8 py-12">
+    <div className="space-y-6 bg-green-200 px-10 py-20">
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-grow">
           <Input
