@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import dbConnect from "@/lib/dbConnect"
-import Product from "@/models/Product"
+import Product from "@/models/product"
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url)
